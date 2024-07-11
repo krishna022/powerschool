@@ -1,0 +1,49 @@
+.loginContainer{
+    margin-top:30vh;
+}
+
+.bg-secondary{
+    border-radius: 0;
+    height: 396px;
+}
+.tab2-card{
+    border-radius: 0;
+    height:350px;
+}
+
+.form-group{
+    margin: 10px 30px 30px;
+}
+.form-button{
+    float: right;
+    margin: 10px 30px;
+}
+.form-control{
+    font-size: 1.2rem;
+}
+.forgot-pass{
+color: #0c6ffd;
+margin-left:20px;
+}
+.tabs{
+    margin: 0;
+    .col-md-6{
+    padding: 0;
+    cursor: pointer;
+    }
+}
+h4{
+    font-size: 22px;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+    background: #a0a0a0;
+}
+.activeTab{
+    background: #0c6ffd;
+}
+.alert{
+    position: absolute;
+    width: 94%;
+    margin-top: -140px;
+}

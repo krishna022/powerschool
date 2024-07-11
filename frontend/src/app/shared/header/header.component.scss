@@ -1,0 +1,36 @@
+.breadcrumbNav{
+    margin: 30px;
+}
+
+.navbar{
+    padding: 20px 30px;
+    a{
+        color: #fff;
+    }
+    .nav-item{
+        cursor: pointer;
+        a{
+        color: #fff;
+        }
+    }
+
+    .nav-item :hover{
+        a{
+        color: #0c6ffd;
+        }
+    }
+    
+}
+
+.right-menu{
+    width: 100%;
+    ul{
+        float: left;
+    }
+}
+
+.active{
+        a{
+        color: #0c6ffd !important;
+        }
+}

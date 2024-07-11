@@ -1,0 +1,40 @@
+<div class="card-body">
+       <div *ngIf="show_alert" [ngClass]="{ 'alert': message, 'alert-success': message.type === 'success', 'alert-danger': message.type === 'error' }">
+        <ul class="list-inline mb-0" style="float: right;">
+        <li><a data-action="close"><i class="feather ft-x" (click)="close_alert()"></i></a></li>
+        </ul>{{message.text}}
+    </div>
+ 
+    <div class="tab-pane fade active show" id="account" role="tabpanel" aria-labelledby="account-tab">
+        <form action="#" class="form-horizontal auth-form" [formGroup]="registerForm" (ngSubmit)="tryRegister()">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input required="" type="email" class="form-control" formControlName="name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                        <div *ngIf="f.name.errors.required">Name is required</div>
+                    </div>
+            </div>
+
+            <div class="form-group">
+                <label>Email Id</label>
+                <input required="" type="email" class="form-control" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" 
+                (blur)="validateEmail() "/>
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.pattern">This is not a valid Email id</div>
+                    </div>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input required="" type="password" class="form-control" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                    </div>
+            </div>
+            <div class="form-button">
+                <button class="btn btn-primary" type="submit">Register</button>
+            </div>
+            <p>&nbsp;</p>
+     </form>
+</div>
+</div>

@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand" href="#">WELCOME TO POWER SCHOOL</a>
+  
+    <div class="right-menu">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Appointments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" (click)="deleteAccount()">Delete My Account</a>
+        </li>
+      </ul>
+      <div class="my-2 my-lg-0 right">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <nav aria-label="breadcrumb" class="breadcrumbNav">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Appointments</li>
+    </ol>
+  </nav>
