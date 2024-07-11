@@ -19,6 +19,7 @@ temp
 ####################
 # PLATFORM FILES
 ####################
+.angular/
 node-modules
 npm-debug.log
 backend/node_modules
