@@ -101,8 +101,8 @@ submitAppointment() {
         this.loading = false;
       },
       error: (e) => 
-        // this.alert('error', e.message)
-      this.alert('error', 'Opps! Something went wrong')
+         this.alert('error', e.error.message)
+      // this.alert('error', 'Opps! Something went wrong')
       }); 
     }
 

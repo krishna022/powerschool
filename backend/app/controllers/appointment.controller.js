@@ -9,6 +9,12 @@ exports.create = (req, res) => {
     return;
   }
 
+  const getTimedifference = new Date(req.body.end_time).getTime() - new Date().getTime();
+  if (getTimedifference <= 0) {
+    res.status(400).send({ message: "Can't Create Appointments in past Dates" });
+    return;
+  }
+
   // Create a Appointment
   const appointment = new Appointment({
     title: req.body.title,

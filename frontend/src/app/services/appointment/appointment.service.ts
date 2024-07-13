@@ -14,10 +14,13 @@ export class AppointmentService {
     if(localStorage.getItem('currentUser')){
       this.currentUser = localStorage.getItem('currentUser');
       this.currentUser = JSON.parse(this.currentUser);
-    }
       this.header = new HttpHeaders({ 
-     'x-access-token': this.currentUser.accessToken
-      });
+        'x-access-token': this.currentUser.accessToken
+         });
+    }else{
+      this.header = new HttpHeaders({ });
+    }
+
   }
 
   getAll(): Observable<Appointment[]> {
